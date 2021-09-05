@@ -3,7 +3,8 @@ import { dotenv } from "@ev-fns/dotenv";
 dotenv();
 
 import server from "@ev-fns/server";
-import { app, middlewares } from "./utils/express";
+import { app } from "./utils/app";
+import { middlewares } from "./utils/middlewares";
 
 const PORT = +process.env.PORT || 3000;
 
