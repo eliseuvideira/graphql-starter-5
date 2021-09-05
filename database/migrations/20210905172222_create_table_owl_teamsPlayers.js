@@ -6,7 +6,7 @@ const { Knex } = require("knex");
 exports.up = async (knex) => {
   await knex.schema.withSchema("owl").createTable("teamsPlayers", (table) => {
     // Fields
-    table.text("teamId").notNullable();
+    table.integer("teamId").notNullable();
     table.integer("playerId").notNullable();
 
     // Primary Key

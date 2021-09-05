@@ -6,7 +6,7 @@ const { Knex } = require("knex");
 exports.up = async (knex) => {
   await knex.schema.withSchema("owl").createTable("teams", (table) => {
     // Fields
-    table.text("teamId").notNullable();
+    table.increments("teamId", { primaryKey: false }).notNullable();
     table.text("name").notNullable();
     table.text("city").notNullable();
     table.text("location").notNullable();

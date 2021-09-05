@@ -9,7 +9,7 @@ exports.up = async (knex) => {
     table.increments("playerId", { primaryKey: false }).notNullable();
     table.text("name").notNullable();
     table.text("country").notNullable();
-    table.specificType("signatureHeroes", "text[]");
+    table.specificType("signatureHeroes", "text[]").notNullable();
     table.boolean("active").notNullable().defaultTo(true);
     table.dateTime("createdAt").notNullable().defaultTo(knex.fn.now());
     table.dateTime("updatedAt").notNullable().defaultTo(knex.fn.now());
