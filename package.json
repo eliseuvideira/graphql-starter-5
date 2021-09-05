@@ -20,8 +20,8 @@
     "graphql": "^15.5.2"
   },
   "scripts": {
-    "build": "tsc",
-    "dev": "ts-node-dev src/server.ts",
-    "start": "node build/server.js"
+    "build": "rm -rf build/ && tsc",
+    "dev": "ts-node-dev src/index.ts",
+    "start": "node build/index.js"
   }
 }
