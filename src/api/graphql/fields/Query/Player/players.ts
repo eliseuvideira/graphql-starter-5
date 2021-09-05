@@ -3,6 +3,6 @@ import * as resolvers from "../../../resolvers/Query/Player/players";
 import { Player } from "../../../types/Player";
 
 export const players: GraphQLFieldConfig<null, any, any> = {
-  type: new GraphQLNonNull(new GraphQLList(Player)),
+  type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(Player))),
   resolve: resolvers.players,
 };

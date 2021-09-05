@@ -3,6 +3,6 @@ import * as resolvers from "../../../resolvers/Query/Team/teams";
 import { Team } from "../../../types/Team";
 
 export const teams: GraphQLFieldConfig<null, any, any> = {
-  type: new GraphQLNonNull(new GraphQLList(Team)),
+  type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(Team))),
   resolve: resolvers.teams,
 };

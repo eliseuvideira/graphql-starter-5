@@ -1,8 +1,10 @@
-import { GraphQLFieldConfig, GraphQLList, GraphQLNonNull } from "graphql";
-import * as resolvers from "../../../resolvers/Query/Team/teams";
+import { GraphQLList, GraphQLNonNull } from "graphql";
+import { field } from "../../../../../function/fields";
+import { PlayerProps } from "../../../../../models/Player";
+import * as resolvers from "../../../resolvers/Edge/Player/teams";
 import { Team } from "../../../types/Team";
 
-export const teams: GraphQLFieldConfig<null, any, any> = {
-  type: new GraphQLNonNull(new GraphQLList(Team)),
+export const teams = field<PlayerProps>({
+  type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(Team))),
   resolve: resolvers.teams,
-};
+});

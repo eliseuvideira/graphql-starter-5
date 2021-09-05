@@ -2,6 +2,7 @@ import {
   GraphQLFieldConfigMap,
   GraphQLObjectType,
   GraphQLSchema,
+  printSchema,
   Thunk,
 } from "graphql";
 import path from "path";
@@ -51,3 +52,5 @@ export const schema = new GraphQLSchema({
   query,
   types,
 });
+
+console.log(printSchema(schema));
