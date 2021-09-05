@@ -5,12 +5,20 @@
   "author": "Eliseu Videira <eliseuvideira1@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/cors": "^2.8.12",
     "@types/node": "^16.7.10",
     "ts-node": "^10.2.1",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.4.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@ev-fns/dotenv": "^1.0.1",
+    "@ev-fns/errors": "^0.1.1",
+    "@ev-fns/server": "^0.2.1",
+    "cors": "^2.8.5",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.2"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev src/server.ts",
